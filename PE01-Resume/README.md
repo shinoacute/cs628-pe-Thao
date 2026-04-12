@@ -1,3 +1,15 @@
+# Input
+
+The Resume web application accepts static data directly embedded within the React component. The inputs include personal information such as the student's name, address, phone number, and email. Additionally, the application takes in academic details including degree titles, universities, graduation dates, and GPA scores. Project information such as project names, descriptions, and GitHub repository URLs are also provided as input.
+
+# Process
+
+The application processes the input data using React, a JavaScript library for building user interfaces. The `Resume` component organizes the data into structured JSX elements, applying CSS class names to enable styled rendering. The component groups related information into semantic HTML sections, including a header, an education section, and a projects section. React then compiles and renders these components into a virtual DOM, which is translated into actual HTML displayed in the browser.
+
+# Output
+
+The output is a visually structured resume webpage rendered in the browser. Users can view the student's personal contact information, educational background, and project portfolio. The projects section includes clickable hyperlinks that open the corresponding GitHub repositories in a new tab, allowing viewers to access source code directly from the rendered resume page.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
