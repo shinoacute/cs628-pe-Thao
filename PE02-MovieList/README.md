@@ -1,3 +1,15 @@
+# Input
+
+The MovieList application receives user input in two ways. First, it uses a predefined array of movie objects embedded directly in the component, each containing a title, genre, and release year — this serves as the application's data source. Second, it accepts live interaction from the user: a dropdown menu captures genre selections to filter the displayed list, and mouse click events on individual movie cards trigger an alert response.
+
+# Process
+
+When the component mounts, it initialises two state variables using the `useState` hook: the full movies array and the selected genre (defaulting to "All Genres"). A derived array of unique genres is computed using JavaScript's `Set`. On every render, the component filters the movies array against the selected genre. If "All Genres" is chosen, all movies pass through; otherwise only matching entries are retained. Click events are handled by an inline `handleClick` function within the `MovieCard` sub-component.
+
+# Output
+
+The application renders a styled, interactive movie list in the browser. A dropdown select element displays all available genres. Below it, only the movies matching the selected genre are shown as individual cards, each displaying the title, genre label, and release year. When a user clicks any card, a browser alert box appears confirming the movie title that was clicked.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
