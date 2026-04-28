@@ -1,3 +1,18 @@
+# PE03 – ToDo List App
+
+A React application for managing tasks using component-based architecture and the `useState` hook.
+
+# Input
+
+The application accepts user input through a controlled text field rendered in the `App` component. As the user types, the `onChange` event handler updates the `inputValue` state in real time. The user submits a task by clicking the **Add Task** button or pressing the **Enter** key, triggering the `handleAddTask` function. Each task's deletion is initiated by clicking the **Delete** button rendered inside the `TodoItem` component.
+
+# Process
+
+When a task is added, `handleAddTask` trims whitespace, creates a new todo object with a unique `id` (via `Date.now()`) and the entered text, then calls `setTodos` to append it to the `todos` array. When deleted, `handleDelete` filters the array by `id`, removing the matching entry. React re-renders the component tree automatically after every state change.
+
+# Output
+
+The updated `todos` array is passed as a prop to `TodoList`, which uses the `.map()` function to render a `TodoItem` for each entry. Each item displays the task description and a **Delete** button. An animated slide-in effect highlights newly added tasks. A live task counter in the heading reflects the current number of todos, and an empty-state message is shown when the list is clear.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
